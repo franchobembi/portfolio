@@ -57,18 +57,17 @@ function arrowClicked() {
 }
 function arrowClicked2() {
   var body = document.body;
-  body.classList.add('animated', 'slideOutUp');
+  body.id = "bodyUp";
   var homepage = document.getElementById("homepage");
   homepage.classList.add('animated', 'slideOutUp');
-  homepage.addEventListener('animationend', function remove() {
-  homepage.parentNode.removeChild(homepage);
-  })
-
   var portfolioSection = document.getElementById("portfolioSection");
   var portfolio = document.createElement("div");
   portfolio.id = "portfolio";
+  homepage.addEventListener('animationend', function remove() {
+  homepage.parentNode.removeChild(homepage);
   portfolioSection.appendChild(portfolio);
-  
+  })
+
   }
 
 

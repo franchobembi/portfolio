@@ -6,24 +6,16 @@ body {
     background-position: 50% 50%;
 }
 
-.bodyUp{
-    animation-name: bodyUp;
+#bodyUp {
+    animation-name: bodyUp; 
     animation-duration: 1s; 
 }
+@keyframes bodyUp {
+    0% {
+        background-position: 50% 50%;
+    }
 
-.bodyDown{
-    animation-name: bodyDown;
-    animation-duration: 1s; 
-}
-
-.bodyLeft{
-    animation-name: bodyLeft;
-    animation-duration: 1s; 
-}
-
-.bodyUp{
-    animation-name: bodyRight;
-    animation-duration: 1s; 
+    100% {background-position: 50% 100%}
 }
 
 #mainCircle {
@@ -209,3 +201,15 @@ body {
     height: 50vh; 
     width: 50vw;
     background-color: purple;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    opacity: 0;   
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+
+    100% {
+        opacity: 1; 
+    }
+}
