@@ -1,0 +1,211 @@
+
+
+body {
+    background-image: url("../images/back.png");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.bodyUp{
+    animation-name: bodyUp;
+    animation-duration: 1s; 
+}
+
+.bodyDown{
+    animation-name: bodyDown;
+    animation-duration: 1s; 
+}
+
+.bodyLeft{
+    animation-name: bodyLeft;
+    animation-duration: 1s; 
+}
+
+.bodyUp{
+    animation-name: bodyRight;
+    animation-duration: 1s; 
+}
+
+#mainCircle {
+  width: 500px; 
+  height: 500px;
+  background-color: gold;
+  border-radius: 50%;
+  margin-top: 7vh;
+  margin-left: auto;
+  margin-right: auto;
+  justify-self: center; 
+  
+  
+  
+}
+
+#container {
+    align-self: center;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    clip-path: circle();
+    animation-name: fadein;
+    animation-duration: 2s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0.3;
+    }
+}
+
+ #figure {
+    width: 75%;
+    height: auto;
+    margin-top: 5px; 
+    float: left;
+    margin-left: 30px;
+    
+ 
+
+}
+
+#greetings {
+    font-family: 'Roboto thin';
+    font-size: 50pt;
+    padding-top: 75px;
+    position: absolute;
+    padding-left: 250px;
+    color: rgb(175, 42, 175);
+    animation-name: fadein2;
+    animation-duration: 2s;
+    padding-right: 50px;
+
+     
+    
+}
+
+#upArrow {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+    border-bottom: 50px solid rgb(0, 136, 141);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+#grid {
+    margin-left: auto;
+    margin-right: auto; 
+    max-width: 750px; 
+    display: grid;
+}
+
+#leftArrow {
+    width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid rgb(0, 136, 141);
+    border-bottom: 25px solid transparent;
+    margin-top: 275px;
+    position: absolute;
+    justify-self: left;
+
+}
+
+#rightArrow {
+    width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid rgb(0, 136, 141);
+    border-bottom: 25px solid transparent;
+    justify-self: right;
+    margin-top: -285px;
+    
+    
+    
+}
+
+#downArrow {
+    width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+    border-top: 50px solid rgb(0, 136, 141);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8vh; 
+}
+
+#downArrow:hover, #upArrow:hover, #leftArrow:hover, #rightArrow:hover {
+    animation-name: hoverArrow;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;     
+}
+
+
+@keyframes hoverArrow {
+   25% {
+       transform: scale(1.5);
+   }
+    
+    100% {
+        transform: scale(1.2);
+        
+    }
+}
+
+
+@media (min-width: 700px) {
+    @keyframes fadein2 {
+     0% {
+        opacity: 0;
+        padding-top: 150px;
+     }
+
+    } 
+}
+
+@media (max-width: 700px){
+  
+    #mainCircle {
+        max-width: 600px; 
+        max-height: 600px; 
+        width: 65vw; 
+        height: 65vw;
+        margin-top: 0vw;
+    }
+
+    #container {
+        animation-name: fadeout;
+        animation-duration: 2s;
+        animation-fill-mode: forwards; 
+    }
+
+    #upArrow, #downArrow, #leftArrow, #rightArrow {
+    visibility: hidden;
+    }
+
+    #greetings {
+        animation-name: fadeout2;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeout2 {
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeout {
+        100% { 
+            opacity: 0.3; 
+        }
+    }
+
+}
+
+#portfolio {
+    height: 50vh; 
+    width: 50vw;
+    background-color: purple;
