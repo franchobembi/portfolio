@@ -8,7 +8,8 @@ body {
 
 #bodyUp {
     animation-name: bodyUp; 
-    animation-duration: 1s; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
 }
 @keyframes bodyUp {
     0% {
@@ -17,6 +18,46 @@ body {
 
     100% {background-position: 50% 100%}
 }
+
+#bodyDown {
+    animation-name: bodyDown; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+}
+@keyframes bodyDown {
+    0% {
+        background-position: 50% 50%;
+    }
+
+    100% {background-position: 50% 0%}
+}
+
+#bodyLeft {
+    animation-name: bodyLeft; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+}
+@keyframes bodyLeft {
+    0% {
+        background-position: 50% 50%;
+    }
+
+    100% {background-position: 0% 50%}
+}
+
+#bodyRight {
+    animation-name: bodyRight; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+}
+@keyframes bodyRight {
+    0% {
+        background-position: 50% 50%;
+    }
+
+    100% {background-position: 100% 50%}
+}
+
 
 #mainCircle {
   width: 500px; 
@@ -128,7 +169,7 @@ body {
     margin-top: 8vh; 
 }
 
-#downArrow:hover, #upArrow:hover, #leftArrow:hover, #rightArrow:hover {
+#downArrow:hover, #logo:hover, #upArrowHome:hover, #upArrow:hover, #leftArrow:hover, #rightArrow:hover {
     animation-name: hoverArrow;
     animation-duration: 0.75s;
     animation-fill-mode: forwards;     
@@ -197,14 +238,19 @@ body {
 
 }
 
+/* PORTFOLIO SECTION OF THE PAGE */
+
 #portfolio {
-    height: 50vh; 
-    width: 50vw;
-    background-color: purple;
+    height: 100vh; 
+    width: 100vw;
     animation-name: fadeIn;
     animation-duration: 1s;
-    opacity: 0;   
+    opacity: 0; 
+    display: grid;
+    grid-template-rows: 15% 20% 50%;
+    grid-template-columns: 1fr 1fr 1fr;  
     animation-fill-mode: forwards;
+
 }
 
 @keyframes fadeIn {
@@ -212,4 +258,54 @@ body {
     100% {
         opacity: 1; 
     }
+}
+
+
+#upArrowHome {
+    width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+    border-bottom: 50px solid rgb(0, 136, 141);
+    justify-self: left;
+    margin-left: 5vw;
+    grid-area: 1 / 1 / 2 / 4;
+    align-self: center; 
+    
+}
+
+#upHeader {
+    font-family: 'Roboto thin';
+    grid-area: 2 / 1 / 3 / 4;
+    margin-left: 5vw;
+    color:rgb(175, 42, 175);
+    font-size: 6vw;
+}
+
+#bubbles {
+    height:25vw;
+    width:25vw;
+    background-color: orange;
+    border-radius: 50%;
+    justify-self: center;
+    text-align: center;
+    text-justify: center;
+    font-family: 'Roboto thin';
+    font-size: 1.5vw;
+    color: white;
+    text-align: ;
+    clip-path: circle;
+    
+    
+}
+
+#text {
+    width: 100%; 
+    
+}
+
+#logo {
+    width: 80%;
+    margin-top: 6vw;
+
 }

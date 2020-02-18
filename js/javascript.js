@@ -48,7 +48,7 @@ function defaultGreeting() {
 
 function arrowClicked() {
   var body = document.body;
-  body.classList.add('animated', 'slideOutDown');
+  body.id = "bodyDown";
   var homepage = document.getElementById("homepage");
   homepage.classList.add('animated', 'slideOutDown');
   homepage.addEventListener('animationend', function remove() {
@@ -73,7 +73,7 @@ function arrowClicked2() {
 
 function arrowClicked3() {
   var body = document.body;
-  body.classList.add('animated', 'slideOutLeft');
+  body.id = "bodyRight";
   var homepage = document.getElementById("homepage");
   homepage.classList.add('animated', 'slideOutLeft');
   homepage.addEventListener('animationend', function remove() {
@@ -83,7 +83,7 @@ function arrowClicked3() {
 
 function arrowClicked4() {
   var body = document.body;
-  body.classList.add('animated', 'slideOutRight');
+  body.id = "bodyLeft"; 
   var homepage = document.getElementById("homepage");
   homepage.classList.add('animated', 'slideOutRight');
   homepage.addEventListener('animationend', function remove() {
